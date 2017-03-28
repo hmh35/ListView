@@ -8,7 +8,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,10 +25,12 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         setContentView(R.layout.activity_main);
         list=new ArrayList<Map<String,Object>>();
         listView=(ListView) findViewById(R.id.mylist);
-        simpleAdapter=new SimpleAdapter(this,getData(),R.layout.listview,new String[]{"text", "image"},new int[]{R.id.text,R.id.image});
+        simpleAdapter=new SimpleAdapter(this,getData(),R.layout.listview,new String[]{"text", "image"},
+                new int[]{R.id.text,R.id.image});
         listView.setAdapter(simpleAdapter);
         listView.setOnItemClickListener(this);
     }
+
     private List<Map<String,Object>> getData(){
         list = new ArrayList<Map<String, Object>>();
         Map<String, Object> map = new HashMap<String, Object>();
@@ -48,8 +49,8 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         map5.put("text", "cat");
         map5.put("image", R.drawable.cat);
         Map<String, Object> map6 = new HashMap<String, Object>();
-        map5.put("text", "Elephant");
-        map5.put("image", R.drawable.elephant);
+        map6.put("text", "Elephant");
+        map6.put("image", R.drawable.elephant);
         list.add(map);
         list.add(map2);
         list.add(map3);
