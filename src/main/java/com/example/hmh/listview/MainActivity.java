@@ -58,7 +58,7 @@ public class MainActivity extends Activity implements AdapterView.OnItemClickLis
         list.add(map5);
         list.add(map6);
         Log.i("Main", list.size() + "");
-        return list;
+        return list;//
     }
 
     @Override
